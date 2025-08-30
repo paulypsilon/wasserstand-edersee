@@ -22,7 +22,12 @@ def post_bluesky(text):
 
 def main():
     wert, zeit = get_wasserstand()
-    text = f"🌊 Aktueller Wasserstand Edersee: {wert} m (Stand: {zeit})"
+    # ISO-String in datetime-Objekt umwandeln
+    dt = datetime.fromisoformat(zeit)
+    # Schönes Format: 30.08.2025 um 21:30 Uhr
+    zeit_formatiert = dt.strftime("%d.%m.%Y um %H:%M Uhr")
+    
+    text = f"🌊 Aktueller Wasserstand Edersee: {wert} m (Stand: {zeit_formatiert})"
     print("Posting:", text)
     post_bluesky(text)
 

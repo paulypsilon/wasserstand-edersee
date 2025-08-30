@@ -20,8 +20,14 @@ jobs:
       - name: Install dependencies
         run: pip install requests atproto
 
+      - name: Debug – show files
+        run: |
+          pwd
+          ls -la
+          ls -R
+
       - name: Run script
         env:
           BLUESKY_USER: ${{ secrets.BLUESKY_USER }}
           BLUESKY_PASS: ${{ secrets.BLUESKY_PASS }}
-        run: python /home/runner/work/wasserstand-edersee/wasserstand-edersee/main.py
+        run: python main.py

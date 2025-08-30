@@ -29,7 +29,7 @@ def main():
     # Schönes Format: 30.08.2025 um 21:30 Uhr
     zeit_formatiert = dt.strftime("%d.%m.%Y um %H:%M Uhr")
     
-    text = f"🌊 Aktueller Wasserstand Edersee: {wert} m /n ({zeit_formatiert})"
+    text = f"🌊 Wasserstand Edersee: {wert} m /n({zeit_formatiert})"
     print("Posting:", text)
     post_bluesky(text)
 

@@ -24,4 +24,4 @@ jobs:
         env:
           BLUESKY_USER: ${{ secrets.BLUESKY_USER }}
           BLUESKY_PASS: ${{ secrets.BLUESKY_PASS }}
-        run: python ../main.py
+        run: python main.py

@@ -20,6 +20,8 @@ def post_bluesky(text):
     client.login(BLUESKY_USER, BLUESKY_PASS)
     client.send_post(text)
 
+from datetime import datetime
+
 def main():
     wert, zeit = get_wasserstand()
     # ISO-String in datetime-Objekt umwandeln

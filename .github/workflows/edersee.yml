@@ -2,7 +2,7 @@ name: Edersee Wasserstand
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # 06:00 UTC = 07:00 deutscher Zeit
+    - cron: "0 4 * * *"   # 06:00 UTC = 07:00 deutscher Zeit
   workflow_dispatch:      # erlaubt manuelles Starten
 
 jobs:

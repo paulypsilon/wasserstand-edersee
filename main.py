@@ -94,7 +94,7 @@ def main():
     # Schönes Format: 30.08.2025 um 21:30 Uhr
     zeit_formatiert = dt.strftime("%d.%m.%Y um %H:%M Uhr")
     
-    text = f"🌊 Wasserstand Edersee: {wert.2f}m über NN ({zeit_formatiert})\n"
+    text = f"🌊 Wasserstand Edersee: {wert:.2f}m über NN ({zeit_formatiert})\n"
     text += f"🪣 Füllstand: {fuellstand:.1f}%"
     
     print("Posting:", text)

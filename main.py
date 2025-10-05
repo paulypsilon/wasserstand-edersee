@@ -46,7 +46,6 @@ FUELLSTANDSTABELLE = {
 242: 83.98,
 243: 89.13,
 244: 94.49,
-245: 99.83,
 245: 100.00
 }
 
@@ -93,6 +92,8 @@ def main():
     dt = datetime.fromisoformat(zeit)
     # Schönes Format: 30.08.2025 um 21:30 Uhr
     zeit_formatiert = dt.strftime("%d.%m.%Y um %H:%M Uhr")
+
+    fuellstand = berechne_fuellstand(wert, FUELLSTANDSTABELLE)
     
     text = f"🌊 Wasserstand Edersee: {wert:.2f}m über NN ({zeit_formatiert})\n"
     text += f"🪣 Füllstand: {fuellstand:.1f}%"

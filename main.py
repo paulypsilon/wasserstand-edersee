@@ -97,7 +97,7 @@ def main():
     
     text = f"🌊 Wasserstand: {wert:.2f}m über NN\n"
     text += f"🪣 Füllstand: {fuellstand:.1f}%\n"
-    test += f"({zeit_formatiert})"
+    text += f"({zeit_formatiert})"
     
     print("Posting:", text)
     post_bluesky(text)

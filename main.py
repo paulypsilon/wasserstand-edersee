@@ -95,8 +95,9 @@ def main():
 
     fuellstand = berechne_fuellstand(wert, FUELLSTANDSTABELLE)
     
-    text = f"🌊 Wasserstand Edersee: {wert:.2f}m über NN ({zeit_formatiert})\n"
-    text += f"🪣 Füllstand: {fuellstand:.1f}%"
+    text = f"🌊 Wasserstand: {wert:.2f}m über NN\n"
+    text += f"🪣 Füllstand: {fuellstand:.1f}%\n"
+    test += f"({zeit_formatiert})"
     
     print("Posting:", text)
     post_bluesky(text)
